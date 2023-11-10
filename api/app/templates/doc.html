@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="API beer">
+    <title>API beer</title>
+    <!-- Kit d'icones pour Font Awesome -->
+    <script src="https://kit.fontawesome.com/5131650b02.js" crossorigin="anonymous"></script>
+    
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">Beer API</a>
+    </nav>
+
+    <main role="main">
+
+        <div class="jumbotron">
+            <div class="container">
+                <h1 class="display-3">Beer API</h1>
+                <p>Vous êtes sur la documentation de l'API beer !</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 flex-collumn justify-content-between h-100">
+                    <h2>Liste des bières <i class="fas fa-beer" style="color: #fcba03;"></i></h2>
+                    <p>Ce chemin permet d'obtenir la liste de toutes les bière de la base de données</p>
+                    <p><a href="{{url_for('getBeers')}}" role="button">http://{{request.host + url_for('getBeers')}}</a></p>
+                </div>
+                <div class="col-md-4 flex-collumn justify-content-between h-100">
+                    <h2>Chiffre d'affaire des fabricants <i class="fas fa-shopping-basket" style="color: grey;"></i></h2>
+                    <p>Ce chemin permet d'obtenir Le chiffre d'affaire des fabricants. (merci Vincent <i class="fas fa-thumbs-up"></i>)</p>
+                    <p><a href="{{url_for('getCAByFabricant')}}" role="button">http://{{request.host + url_for('getCAByFabricant')}}</a></p>
+                </div>
+                <div class="col-md-4 flex-collumn justify-content-between h-100">
+                    <h2>Variation des ventes entre 2015 et 2016 <i class="fas fa-chart-line"></i></h2>
+                    <p>Ce chemin permet d'obtenir la variation des ventes de chaque article entre 2015 et 2016</p>
+                    <p><a href="{{url_for('getVariation')}}" role="button">http://{{request.host + url_for('getVariation')}}</a></p>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+</body>
+</html>
