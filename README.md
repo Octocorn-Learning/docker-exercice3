@@ -22,10 +22,12 @@ Vous devez réaliser un fichier docker-compose qui permet de créer les conteneu
 
 - Vous devez créer les Dockerfiles nécessaires à la création des images
 - Le docker-compose doit construire les images à partir des Dockerfiles
-- 
 
-## Aides : 
+## Aides
 
+Les aides ici vous aideront à construire cette application !
+Pensez à bien les lire, en complément de la documentation des images !
+Précision : vous n'avez pas besoin de volumes.
 
 ### API
 
@@ -39,8 +41,12 @@ Vous devez réaliser un fichier docker-compose qui permet de créer les conteneu
 
 - Vous devez utiliser l'image `mysql` comme image de base
 - Vous devez copier le fichier `beer.sql` dans l'entrypoint du conteneur MySQL
+- Le nom de la base de données doit être `beer`
+- Le mot de passe root doit être `root`
 
 ## Aides supplémentaires
+
+> Avant de vous diriger vers les indices, essayez de réaliser l'exercice sans :).
 
 Si vous avez besoin d'indices supplémentaires, vous pouvez vous tourner vers les fichiers suivants : 
 - [Aides du poulet](./consignes/poulet.md) 🐔

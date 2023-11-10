@@ -1,5 +1,3 @@
 Dockerfile
 docker-compose.yml
-api/Dockerfile
-app/Dockerfile
 .dockerignore

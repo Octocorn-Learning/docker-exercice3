@@ -1,5 +1,10 @@
 # Exercice 3 - Docker compose : Aides du poussin
 
+Les responsabilités des différents fichiers : 
+
+- Les `Dockefile` permettent de construire les images. Ils copient les contenus et installent les dépendances
+- Le `docker-compose.yml` permet de créer les conteneurs à partir des images construites précédemment. Il définit les ports à exposer et les variables d'environnement, ainsi que les dépendances entre les conteneurs.
+
 ## Les Dockerfiles
 
 Vous devrez constituer deux `Dockerfile`, un pour chaque service (API et BDD).
@@ -34,8 +39,10 @@ Vous définirez deux services :
 
 - Vous définirez le nom du conteneur : `api-beers` avec l'instruction `container_name`
 - Vous indiquerez l'emplacement de votre Dockerfile avec l'instruction `build`
-- Vous exposerez le port `5000` avec l'instruction `ports`
+- Vous exposerez le port `80` avec l'instruction `ports`
 - Vous définirez une dépendance avec le service `db` avec l'instruction `depends_on`
+
+> Concernant le port, demandez-vous quel port est exposé par le conteneur et quel port est exposé par l'hôte !
 
 ### BDD
 
@@ -45,4 +52,4 @@ La documentation précise aussi que les variables d'environnement suivantes sont
 
 - Vous définirez le nom du conteneur : `db-beers` avec l'instruction `container_name`
 - Vous préciserez les variables d'environnement avec l'instruction `environment`
-- Le port par défaut est précisé sur la documentation : `3307`
+- Il n'est pas nécessaire d'exposer les ports de la BDD.
